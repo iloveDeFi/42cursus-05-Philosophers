@@ -6,7 +6,7 @@
 /*   By: bat <bat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 10:02:16 by bat               #+#    #+#             */
-/*   Updated: 2023/07/10 13:17:49 by bat              ###   ########.fr       */
+/*   Updated: 2023/07/10 16:04:41 by bat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,11 @@ typedef struct s_config
 	pthread_mutex_t	*forks;
 }				t_config;
 
-// philo.c
-void	initialize(t_philo *philo, char **settings);
-void	initialize_next(t_philo *philo);
-int		ft_atoi(const char *str);
+// actions.c
+void		eats(t_config *config);
+void		sleeps(t_config *config);
+void		thinks(t_config *config);
+void		solo(t_config *config);
 
 // errors_and_messages.c
 int			is_positive_number(char *str);
@@ -67,18 +68,13 @@ int			infos_check(int nb_args, char **infos);
 int			error_msg(char flag);
 void		msg(t_config *config, int status)
 
-// time.c
-int			get_time(char c);
+// free_and_finish.c
+void		free_and_finish(t_philo *philo);
 
-// msg
-void		msg(t_config *config, int status);
-
-// actions.c
-void		eats(t_config *config);
-void		sleeps(t_config *config);
-void		thinks(t_config *config);
-void		state_update(t_config *config, char flag)
-void		solo(t_config *config);
+// main.c
+void	initialize(t_philo *philo, char **settings);
+void	initialize_next(t_philo *philo);
+int		ft_atoi(const char *str);
 
 // simulation.c
 void		launch_sim(t_philo **philo);
@@ -91,7 +87,7 @@ void		*philo_day(void	*config);
 int			state(t_config *config);
 void		state_update(t_config *config, char flag);
 
-// free_finish.c
-void		free_finish(t_philo *philo);
+// time.c
+int			get_time(char c);
 
 #endif
