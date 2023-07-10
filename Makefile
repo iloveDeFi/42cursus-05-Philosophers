@@ -6,21 +6,30 @@
 #    By: bat <bat@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 10:07:23 by bat               #+#    #+#              #
-#    Updated: 2023/07/03 10:07:24 by bat              ###   ########.fr        #
+#    Updated: 2023/07/10 12:53:23 by bat              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = philosophers
+NAME 		= philo
 
-SRCS = main.c \
-       utils.c \
-       philo.c \
-       monitor.c
+SRCS 		= actions.c \
+       errors_and_messages.c \
+       free_and_finish.c \
+       main.c \
+	   simulation.c \
+	   state.c \
+	   time.c 
 
-OBJS = $(SRCS:.c=.o)
+INCLUDES 	= philo.h \
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -pthread
+OBJS 		= $(SRCS:.c=.o)
+
+SRCS		= $(wildcard *.c)
+
+CC 			= gcc
+CFLAGS 		= -Wall -Wextra -Werror -g -fsanitize=thread -pthread
+
+RM 			= rm -f
 
 all: $(NAME)
 
