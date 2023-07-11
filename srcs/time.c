@@ -6,7 +6,7 @@
 /*   By: bat <bat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 09:49:30 by bat               #+#    #+#             */
-/*   Updated: 2023/07/10 15:49:43 by bat              ###   ########.fr       */
+/*   Updated: 2023/07/11 08:47:50 by bat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 	else return the difference with the current time */
 int	get_time(char c)
 {
-	struct timeval			tv;
 	static struct timeval	start_time;
+	struct timeval			tv;
 
 	if (c == 'i')
 	{

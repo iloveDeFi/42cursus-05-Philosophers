@@ -6,16 +6,16 @@
 #    By: bat <bat@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 10:07:23 by bat               #+#    #+#              #
-#    Updated: 2023/07/10 12:53:23 by bat              ###   ########.fr        #
+#    Updated: 2023/07/11 09:24:42 by bat              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 		= philo
 
 SRCS 		= actions.c \
-       errors_and_messages.c \
-       free_and_finish.c \
-       main.c \
+       errors_&_messages.c \
+       free_&_finish.c \
+       main_&_init.c \
 	   simulation.c \
 	   state.c \
 	   time.c 

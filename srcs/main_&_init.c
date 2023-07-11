@@ -6,26 +6,11 @@
 /*   By: bat <bat@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 17:53:52 by bat               #+#    #+#             */
-/*   Updated: 2023/07/10 13:24:05 by bat              ###   ########.fr       */
+/*   Updated: 2023/07/11 09:22:22 by bat              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo.h"
-
-int main(int ac, char **av)
-{
-    t_philo *philo;
-
-    philo = malloc(sizeof(t_philo));
-    if (!philo)
-        return (0);
-    if (!infos_check(ac, av))
-        return (0);
-    initialize(philo, av);
-    lauch_simulation(&philo);
-    terminate(philo);
-    return (0);
-}
 
 int	main(int ac, char **av)
 {
